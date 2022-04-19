@@ -12,6 +12,8 @@ namespace StructExample
                 public string msv_234;
                 public double toan_234;
                 public double ly_234;
+                public string age_234;
+                public string className_234;
                 public double hoa_234;
                 public gioitinh gioitinh_234;
 
@@ -35,12 +37,16 @@ namespace StructExample
                 for (int i = 0; i < n; i++)
                 {
                     Console.WriteLine("Nhap sinh vien thu " + (i + 1));
-                    Console.Write("Ho ten: ");
+                    Console.Write("Ho ten sinh vien: ");
                     string ht_234 = Console.ReadLine();
                     Console.Write("Ma sinh vien: ");
                     string msv_234 = Console.ReadLine();
                     Console.Write("Gioi tinh (0: nam  1: nu): ");
                     int gt_234 = int.Parse(Console.ReadLine());
+                    Console.Write("Lop sinh vien: ");
+                    string className = Console.ReadLine();
+                    Console.Write("Tuoi sinh vien: ");
+                    string age = Console.ReadLine();
                     Console.Write("Diem toan: ");
                     double dt_234 = double.Parse(Console.ReadLine());
                     Console.Write("Diem ly: ");
@@ -51,13 +57,16 @@ namespace StructExample
 
                     sv[i].hoten_234 = ht_234;
                     sv[i].msv_234 = msv_234;
+                    
                     if (gt_234 == 0)
                         sv[i].gioitinh_234 = gioitinh.Nam;
                     else
                         sv[i].gioitinh_234 = gioitinh.Nu;
-                    sv[i].toan_234 = dt_234;
-                    sv[i].ly_234 = dl_234;
-                    sv[i].hoa_234 = dh_234;
+                        sv[i].className_234 = className;
+                        sv[i].age_234 = age;
+                        sv[i].toan_234 = dt_234;
+                        sv[i].ly_234 = dl_234;
+                        sv[i].hoa_234 = dh_234;
 
                 }
             }
@@ -86,6 +95,8 @@ namespace StructExample
                         Console.WriteLine("Gioi tinh: Nam");
                     else
                        Console.WriteLine("Gioi tinh: Nu");
+                    Console.WriteLine("Lop Sinh Vien: " + item_234.className_234);
+                    Console.WriteLine("Tuoi Sinh Vien: " + item_234.age_234);
                     Console.WriteLine("Diem toan: " + item_234.toan_234);
                     Console.WriteLine("Diem ly: " + item_234.ly_234);
                     Console.WriteLine("Diem hoa: " + item_234.hoa_234);
@@ -124,6 +135,8 @@ namespace StructExample
                         else
                             Console.WriteLine("Gioi tinh: Nữ");
                         Console.WriteLine("Diem toan: " + item_234.toan_234);
+                        Console.WriteLine("Lop Sinh Vien: " + item_234.className_234);
+                        Console.WriteLine("Tuoi Sinh Vien: " + item_234.age_234);
                         Console.WriteLine("Diem ly: " + item_234.ly_234);
                         Console.WriteLine("Diem hoa: " + item_234.hoa_234);
                         int hocluc = (int)mediumScore(item_234.toan_234, item_234.ly_234, item_234.hoa_234);
